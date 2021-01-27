@@ -1,0 +1,125 @@
+/* définition des polices et couleurs personnalisées */
+
+@font-face {
+  font-family: 'robotoblack';
+  src: url('polices/Roboto-Black-webfont.eot');
+  src: url('polices/Roboto-Black-webfont.eot?#iefix') format('embedded-opentype'),
+       url('polices/Roboto-Black-webfont.woff2') format('woff2'),
+       url('polices/Roboto-Black-webfont.woff') format('woff'),
+       url('polices/Roboto-Black-webfont.ttf') format('truetype'),
+       url('polices/Roboto-Black-webfont.svg#robotoblack') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'roboto';
+  src: url('polices/Roboto-Light-webfont.eot');
+    src: url('polices/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('polices/Roboto-Light-webfont.woff2') format('woff2'),
+         url('polices/Roboto-Light-webfont.woff') format('woff'),
+         url('polices/Roboto-Light-webfont.ttf') format('truetype'),
+         url('polices/Roboto-Light-webfont.svg#robotolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'shrikhand';
+  src: url('polices/shrikhand-regular-webfont.eot');
+  src: url('polices/shrikhand-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('polices/shrikhand-regular-webfont.woff') format('woff'),
+       url('polices/shrikhand-regular-webfont.ttf') format('truetype'),
+       url('polices/shrikhand-regular-webfont.svg#shrikhandregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+$purple: #9356DC;
+$pink: #FF79DA;
+$green: #99e2D0;
+$primary:rgb(246, 246, 246);
+
+
+/* définition des styles pricipaux de la page */
+
+.container
+{
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+body
+{
+  font-family: roboto, Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+h1
+{
+  font-weight: normal;
+}
+
+h2
+{
+  font-family: robotoblack, Arial, Helvetica, sans-serif;
+  font-size: 24px;
+}
+
+.header
+{
+  font-family: shrikhand, roboto, Arial, sans-serif;
+  font-size: 15px;
+  text-align: center;
+  .header__logo
+  {
+    margin: 15px 0px;
+  }
+}
+
+.location
+{
+  background-color: darken($primary, 5%) ;
+  text-align:center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: inset 5px 12px 5px -10px darken($primary, 20%);
+  .location__libelle
+  {
+    padding-left: 10px;
+    font-weight: bold;
+  }
+}
+
+.introducing
+{
+  background-color: $primary;
+  text-align: center;
+  padding: 15px 15px 10px 15px;
+  height: 260px;
+  p
+  {
+    font-size: 18px;
+    margin-top: 5px;
+    padding-bottom: 25px;
+  }
+
+  a
+  {
+    background:linear-gradient($pink, $purple);
+    padding: 15px 25px 15px 25px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    border-radius: 25px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+
+
+
+
