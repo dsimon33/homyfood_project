@@ -43,7 +43,26 @@ $pink: #FF79DA;
 $green: #99e2D0;
 $primary:rgb(246, 246, 246);
 
+@mixin fontnormal {
+  font-family: roboto, Arial, Helvetica, sans-serif;
+}
 
+@mixin fontblack {
+  font-family: robotoblack, Arial, Helvetica, sans-serif;
+}
+
+@mixin fontlogo {
+  font-family: shrikhand, roboto, Arial, sans-serif;
+}
+
+/* Modification au survol des vignettes Fonctionnements */
+@mixin hover_wl {
+  background-color: lighten($purple, 35%);
+  i{
+    color: $purple;
+  }
+  
+}
 /* définition des styles pricipaux de la page */
 
 .container
@@ -54,7 +73,7 @@ $primary:rgb(246, 246, 246);
 
 body
 {
-  font-family: roboto, Arial, Helvetica, sans-serif;
+  @include fontnormal();
   color: black;
 }
 
@@ -65,21 +84,23 @@ h1
 
 h2
 {
-  font-family: robotoblack, Arial, Helvetica, sans-serif;
+  @include fontblack();
   font-size: 24px;
 }
 
+/* header */
 .header
 {
-  font-family: shrikhand, roboto, Arial, sans-serif;
+  @include fontlogo();
   font-size: 15px;
   text-align: center;
-  .header__logo
+  &__logo
   {
     margin: 15px 0px;
   }
 }
 
+/* choix de la localisation de recherche */
 .location
 {
   background-color: darken($primary, 5%) ;
@@ -87,13 +108,14 @@ h2
   padding-top: 15px;
   padding-bottom: 15px;
   box-shadow: inset 5px 12px 5px -10px darken($primary, 20%);
-  .location__libelle
+  &__libelle
   {
     padding-left: 10px;
     font-weight: bold;
   }
 }
 
+/* présentation courte de l'entreprise */
 .introducing
 {
   background-color: $primary;
@@ -119,6 +141,185 @@ h2
     font-weight: 600;
   }
 }
+
+/* principes de fonctionnement */
+
+.working
+{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.working__steps
+{
+  display: flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  width: 100%;
+}
+.working__step
+{
+  background-color: $primary;
+  width: 300px;
+  margin-bottom: 20px;
+  padding: 20px 30px 20px 0px;
+  border-radius: 20px;
+  position: relative;
+  left: 12px;
+  box-shadow: 5px 5px 5px darken($primary, 5%);
+  &:hover{
+    @include hover_wl;
+  }
+  &__numbering
+  {
+    display:inline-block;
+    background-color: $purple;
+    color: white;
+    font-size: 70%;
+    font-weight: bold;
+    border-radius: 12px;
+    width: 24px;
+    height: 20px;
+    text-align: center;
+    padding-top: 4px;
+    position: absolute;
+    left: -10px;
+  }
+  i
+  {
+    margin-right: 10px;
+    margin-left:30px;
+    color: darken($primary, 50%);
+  }
+  &__text
+  {
+    @include fontnormal();
+    font-weight:800;
+  }
+}
+
+/* Présentation des restaurants */
+
+.restaurant_lists
+{
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: $primary;
+}
+
+.restaurant_title
+{
+  margin: 0px 20px
+}
+.restaurant
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: center;
+    &__list
+    {
+      height: 100%;
+      width: 270px;
+      background-color: white;
+      box-sizing: border-box;
+      box-shadow: 5px 5px 5px darken($primary, 5%);
+      border-radius: 20px;
+      margin: 20px;
+    }
+    &__visual
+    {
+      margin: 0px;
+    }
+    a
+    {
+      text-decoration: none;
+      color: black;
+    }
+    img
+    {
+      object-fit: cover;
+      max-width: 100%;
+      width: 100%;
+      max-height: 100%;
+      height: 150px;
+      border-radius: 20px 20px 0px 0px;
+    }
+    &__description
+    {
+      @include fontblack();
+      font-size: 15px;
+      font-weight: 800;
+      margin: 4px 30px 0px 12px;
+      height: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    p
+    {
+      margin: 0px 0px 10px 12px;
+      font-size: 15px;
+    }
+
+    figcaption
+    {
+      position: relative;
+    }
+
+    i
+    {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+    }
+
+    &__new
+    {
+      position: absolute;
+      right: 10px;
+      top: -150px;
+      padding: 5px 10px;
+      background-color: darken($primary, 10%);;
+      border-radius: 3px;
+      color:darken($primary, 50%);
+      font-size: 15px;
+      font-weight: 800;
+    }
+}
+
+/* footer */
+
+.footer
+{
+  background-color: darken($primary, 80%);
+  color: white;
+  padding: 20px;
+  &__logo
+  {
+    @include fontlogo();
+  }
+}
+
+.footer__list
+{
+  padding-left: 0px;
+
+  &__elmt
+  {
+    list-style-type: none;  
+  a
+  {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+  }
+  }
+}
+
+
+
 
 
 
