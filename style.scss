@@ -273,6 +273,7 @@ h2
       position: absolute;
       right: 15px;
       top: 10px;
+      font-size: 120%;
     }
 
     &__new
@@ -281,9 +282,9 @@ h2
       right: 10px;
       top: -150px;
       padding: 5px 10px;
-      background-color: darken($primary, 10%);;
+      background-color: $green;
       border-radius: 3px;
-      color:darken($primary, 50%);
+      color:darken($green, 40%);
       font-size: 15px;
       font-weight: 800;
     }
@@ -308,15 +309,26 @@ h2
 
   &__elmt
   {
-    list-style-type: none;  
+    list-style-type: none;
+    vertical-align: middle;
   a
   {
     text-decoration: none;
     color: white;
     font-size: 12px;
+    position: relative;
+  }
+  span
+  {
+    font-weight: bold;
+    position: absolute;
+    left: 25px;
+    width: 150px;
+    padding-top: 3px;
   }
   }
 }
+
 
 
 
