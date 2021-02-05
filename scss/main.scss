@@ -1,0 +1,60 @@
+/* définition des polices et couleurs personnalisées */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
+
+$purple: #9356DC;
+$pink: #FF79DA;
+$green: #99e2D0;
+$primary:rgb(246, 246, 246);
+$linear: linear-gradient($purple, $pink);
+
+@mixin fontnormal {
+  font-family: roboto, Arial, Helvetica, sans-serif;
+}
+
+@mixin fontblack {
+  @include fontnormal();
+  font-weight: 800;
+}
+
+@mixin fontlogo {
+  font-family: shrikhand, roboto, Arial, sans-serif;
+}
+
+/* Modification au survol des vignettes Fonctionnements */
+@mixin hover_wl {
+  background-color: lighten($purple, 35%);
+  i{
+    color: $purple;
+  }
+}
+
+/* Modification du coeur au clic */
+@mixin heart {
+  &:checked + i {
+    opacity: 1;
+    transition: all 2s linear 0.5s;
+    color: $purple;
+  } 
+}
+
+/* Apparence des buttons */
+@mixin button {
+    background:linear-gradient($pink, $purple);
+    padding: 15px 25px 15px 25px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    border-radius: 25px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+@import "./homepage";
+@import "./menupages";
+
+
+
+
+
+
