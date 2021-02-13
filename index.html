@@ -9,20 +9,35 @@
 </head>
 <body>
     <div id="container">
+      <div class="load-6">
+        <div class="letter-holder">
+          <div class="l-1 letter">O</div>
+          <div class="l-2 letter">h</div>
+          <div class="l-3 letter">m</div>
+          <div class="l-4 letter">y</div>
+          <div class="l-5 letter">f</div>
+          <div class="l-6 letter">o</div>
+          <div class="l-7 letter">o</div>
+          <div class="l-8 letter">d</div>
+          <div class="l-9 letter">.</div>
+          <div class="l-10 letter">.</div>
+          <div class="l-11 letter">.</div>
+        </div>
+      </div>
         <!--header avec le logo du site-->
         <header class="header">
             <h1 class="header__logo">ohmyfood</h1>
         </header>
         <!--choix de la localisation de recherche-->
-        <section class="location">
+        <div class="location">
             <i class="fas fa-map-marker-alt location__icon"></i>
             <span class="location__libelle">Paris, Belleville</span>
-        </section>
+        </div>
         <!--Présention courte de l'entreprise-->
         <section class="introducing">
-            <h2 class="introducing__title">Réservez le menu qui </br>vous convient</h2>
+            <h2 class="introducing__title">Réservez le menu qui<br>vous convient</h2>
             <p class="introducing__subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-            <a class="introducing__btn">Explorer nos restaurants</a>
+            <a href="#restaurant_lists" class="introducing__btn">Explorer nos restaurants</a>
         </section>
         <!--principes de fonctionnement-->
         <section class="working_list">
@@ -48,38 +63,39 @@
             </div>
           </section>
           <!--présentation des restaurants-->
-          <section class="restaurant_lists">
+          <section id="restaurant_lists">
             <div class="restaurant_list"> 
             <h2 class="restaurant_title">Restaurants</h2>
             <div class="restaurant">            
                 <div class="restaurant__list">
                     <figure class="restaurant__visual">
-                        <a href="./la-palette-du-gout.html">
-                        <img 
-                        class="restaurant__visual__img"
-                        src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                        alt="visuel d'un couvert de coté, assiette tenue en amin avec un plat gastronomique">
-                        </a>
+                      <a href="./la-palette-du-gout.html">
+                      <img 
+                      class="restaurant__visual__img"
+                      src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                      alt="visuel d'un couvert de coté, assiette tenue en amin avec un plat gastronomique">
+                      </a>  
                         <figcaption class=restaurant__visual__description>
-                            <h3 class="restaurant__description">La palette du goût</h3>
-                            <p>Ménilmontant</p>
-                            <span class="restaurant__new">Nouveau</span>
-                            <div>
-                            <input type="checkbox" class="heart" name="heart">
-                            <i class="fas fa-heart restaurant__ico--color"></i>
-                            </div>
-                            <i class="far fa-heart restaurant__ico"></i>
-                        </figcaption>  
-                      </figure>
+                          <h3 class="restaurant__description">La palette du goût</h3>
+                          <p>Ménilmontant</p>
+                          <span class="restaurant__new">Nouveau</span>
+                          <div>
+                          <input type="checkbox" class="heart" name="heart">
+                          <i class="fas fa-heart restaurant__ico--color"></i>
+                          </div>
+                          <i class="far fa-heart restaurant__ico"></i>
+                        </figcaption> 
+                    </figure>
                 </div>
                 <div class="restaurant__list">
-                  <a href="#">
                   <figure class="restaurant__visual">
+                    <a href="./la-note-enchantee.html">
                       <img 
                       class="restaurant__visual__img"
                       src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" 
                       alt="visuel des plats vue de haut">
-                      <figcaption class=restaurant__visual__description>
+                    </a>
+                        <figcaption class=restaurant__visual__description>
                           <h3 class="restaurant__description">La note enchantée</h3>
                           <p>Charonne</p>
                           <span class="restaurant__new">Nouveau</span>     
@@ -88,17 +104,17 @@
                             <i class="fas fa-heart restaurant__ico--color"></i>
                             </div>
                             <i class="far fa-heart restaurant__ico"></i>
-                      </figcaption>  
-                    </figure>
-                  </a>
+                        </figcaption>  
+                  </figure>
                 </div>
                 <div class="restaurant__list">
-                  <a href="#">
                   <figure class="restaurant__visual">
+                    <a href="./a-la-francaise.html">
                       <img 
                       class="restaurant__visual__img"
                       src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" 
                       alt="visuel d'un plat">
+                    </a>
                       <figcaption class=restaurant__visual__description>
                           <h3 class="restaurant__description">À la française</h3>
                           <p>Cité rouge</p>
@@ -109,15 +125,15 @@
                             <i class="far fa-heart restaurant__ico"></i>
                       </figcaption>  
                     </figure>
-                  </a>
                 </div>
                 <div class="restaurant__list">
-                  <a href="#">
                   <figure class="restaurant__visual">
+                    <a href="./le-delice-des-sens.html">
                       <img 
                       class="restaurant__visual__img"
                       src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" 
                       alt="visuel en gros plan d'une assiette longue et creuse bien remplie et posée sur un socle">
+                    </a>  
                       <figcaption class=restaurant__visual__description>
                           <h3 class="restaurant__description">Le délice des sens</h3>
                           <p>Folie-Méricourt</p>     
@@ -128,7 +144,6 @@
                             <i class="far fa-heart restaurant__ico"></i>
                       </figcaption>  
                     </figure>
-                  </a>
                 </div>
             </div>      
             </div>
