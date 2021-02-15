@@ -5,6 +5,8 @@
   margin-top: 20px;
   font-size: 15px;
   position: relative;
+  animation: loading_start 6s;
+  
 }
 
 body
@@ -27,12 +29,12 @@ h2
 
 /* loading spinner */
 .load-6 {
-  animation: loading_end 8s;
+  animation: loading_end 6s;
   position: absolute;
   width: 100%;
   height: 100%;
   background: radial-gradient($purple, $pink);
-  display: none;
+  opacity: 0;
 }
 
 .letter-holder {

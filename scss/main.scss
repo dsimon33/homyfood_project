@@ -100,17 +100,29 @@ $linear: linear-gradient($purple, $pink);
 @keyframes loading_end {
   0% {
     opacity: 1;
-    display: inline;
   }
   80%{
     opacity: 1;
-    display: inline;
   }
   100% {
     opacity:0;
-    display: inline;
   }
 }
+
+/* apparition de la page aptés le loading spinner */
+@keyframes loading_start {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+
 
 @import "./homepage";
 @import "./menupages";
