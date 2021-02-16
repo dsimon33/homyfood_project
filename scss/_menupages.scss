@@ -101,11 +101,19 @@ h4
 {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 100%;
   padding: 5px;
 }
 
+.checkbox_emplt
+{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  max-width: 320px;
+  width: 100%;
+}
 .menu_details
 {
   display: flex;
@@ -120,7 +128,6 @@ h4
   cursor: pointer;
   animation: delay 0.3s;
   animation-fill-mode: both;
-  position: relative;
 
   @for $menudelay from 0 through 9
   {
@@ -139,7 +146,7 @@ h4
   height: 100%;
   cursor: pointer;
   opacity: 0;
-  &:checked + .menu_list__validation
+  &:checked + .menu_details> .menu_list__validation
   {
     animation: valid 1s ;
     animation-fill-mode:both;
@@ -150,7 +157,13 @@ h4
     }
   }
 
-  &:checked .menu_list__compl
+  &:checked + .menu_details> .menu_list> .menu_list__compl
+  {
+    animation: reduce320 1s;
+    animation-fill-mode: both;
+  }
+
+  &:checked + .menu_details> .menu_list> .menu_list__description
   {
     animation: reduce320 1s;
     animation-fill-mode: both;
@@ -164,6 +177,7 @@ h4
     margin: 0px 0px 10px 10px;
     font-size: 14px;
     max-width: 200px;
+    width: 200px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -175,6 +189,7 @@ h4
     margin: 10px 0px 5px 10px;
     font-size: 16px;
     max-width: 200px;
+    width: 200px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
