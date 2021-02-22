@@ -1,0 +1,59 @@
+/* loading spinner */
+.load-6 {
+  animation: loading_end 6s;
+  animation-iteration-count: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient($purple, $pink);
+  opacity: 0;
+}
+
+.letter-holder {
+  display: flex;
+  @include fontblack;
+  font-size: 300%;
+  justify-content: center;
+  align-items: center;
+  height: 850px;
+}
+
+.letter {
+  color: $green;
+  animation: loading 1.7s linear 2;
+  
+}
+
+.l-1 {
+  animation-delay: 0.48s;
+}
+.l-2 {
+  animation-delay: 0.6s;
+}
+.l-3 {
+  animation-delay: 0.72s;
+}
+.l-4 {
+  animation-delay: 0.84s;
+}
+.l-5 {
+  animation-delay: 0.96s;
+}
+.l-6 {
+  animation-delay: 1.08s;
+}
+.l-7 {
+  animation-delay: 1.2s;
+}
+.l-8 {
+  animation-delay: 1.32s;
+}
+.l-9 {
+  animation-delay: 1.44s;
+}
+.l-10 {
+  animation-delay: 1.56s;
+}
+.l-11 {
+  animation-delay: 1.68s;
+}

@@ -2,8 +2,11 @@
 @import "../utils/keyframes";
 @import "../utils/mixins";
 @import "../base/bases";
-@import "./homepage";
-@import "./menupages";
+@import "../components/buttons";
+@import "../layouts/footer";
+@import "../pages/loading_spinner";
+@import "../pages/homepage";
+@import "../pages/menupages";
 
 
 

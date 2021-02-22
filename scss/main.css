@@ -133,43 +133,84 @@
 /* Modification du coeur au clic */
 /* Apparence des buttons */
 /* définition des polices et couleurs personnalisées */
-/* définition des styles pricipaux de la page */
-#container {
-  margin-top: 20px;
+/* bouton explorer nos restaurants */
+.introducing a {
+  background: linear-gradient(#FF79DA, #9356DC);
+  padding: 15px 25px 15px 25px;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  border-radius: 25px;
+  color: white;
   font-size: 15px;
-  position: relative;
-  -webkit-animation: loading_start 6s;
-          animation: loading_start 6s;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-body {
-  font-family: roboto, Arial, Helvetica, sans-serif;
-  color: black;
+/* bouton commander */
+.command {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f6f6f6;
+  text-align: center;
+  align-content: center;
+}
+.command__buton {
+  background: linear-gradient(#FF79DA, #9356DC);
+  padding: 15px 25px 15px 25px;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  border-radius: 25px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-h1 {
-  font-weight: normal;
-  font-size: 30px;
-}
-@media all and (min-width: 992px) {
-  h1 {
-    font-size: 250%;
-  }
-}
-
-h2 {
-  font-family: roboto, Arial, Helvetica, sans-serif;
-  font-weight: 800;
-  font-size: 24px;
+/* footer */
+.footer {
+  background-color: #2a2a2a;
+  color: white;
+  padding: 20px;
 }
 @media all and (min-width: 768px) {
-  h2 {
+  .footer {
     text-align: center;
   }
 }
 @media all and (min-width: 992px) {
-  h2 {
-    font-size: 200%;
+  .footer {
+    font-size: 150%;
+  }
+}
+.footer__logo {
+  font-family: shrikhand, roboto, Arial, sans-serif;
+}
+
+.footer__list {
+  padding-left: 0px;
+}
+.footer__list__elmt {
+  list-style-type: none;
+  vertical-align: middle;
+}
+.footer__list__elmt a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  position: relative;
+}
+.footer__list__elmt span {
+  font-weight: bold;
+  position: absolute;
+  left: 25px;
+  width: 150px;
+  padding-top: 3px;
+}
+@media all and (min-width: 768px) {
+  .footer__list__elmt span {
+    position: initial;
   }
 }
 
@@ -257,6 +298,46 @@ h2 {
           animation-delay: 1.68s;
 }
 
+/* définition des styles principaux de la page */
+#container {
+  margin-top: 20px;
+  font-size: 15px;
+  position: relative;
+  -webkit-animation: loading_start 6s;
+          animation: loading_start 6s;
+}
+
+body {
+  font-family: roboto, Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 30px;
+}
+@media all and (min-width: 992px) {
+  h1 {
+    font-size: 250%;
+  }
+}
+
+h2 {
+  font-family: roboto, Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+}
+@media all and (min-width: 768px) {
+  h2 {
+    text-align: center;
+  }
+}
+@media all and (min-width: 992px) {
+  h2 {
+    font-size: 200%;
+  }
+}
+
 /* header */
 .header {
   font-family: shrikhand, roboto, Arial, sans-serif;
@@ -290,18 +371,6 @@ h2 {
   font-size: 18px;
   margin-top: 5px;
   padding-bottom: 25px;
-}
-.introducing a {
-  background: linear-gradient(#FF79DA, #9356DC);
-  padding: 15px 25px 15px 25px;
-  letter-spacing: 1px;
-  margin-top: 30px;
-  border-radius: 25px;
-  color: white;
-  font-size: 15px;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 /* principes de fonctionnement */
@@ -481,52 +550,6 @@ h2 {
 .heart:checked + i {
   opacity: 1;
   transition: all 2s;
-}
-
-/* footer */
-.footer {
-  background-color: #2a2a2a;
-  color: white;
-  padding: 20px;
-}
-@media all and (min-width: 768px) {
-  .footer {
-    text-align: center;
-  }
-}
-@media all and (min-width: 992px) {
-  .footer {
-    font-size: 150%;
-  }
-}
-.footer__logo {
-  font-family: shrikhand, roboto, Arial, sans-serif;
-}
-
-.footer__list {
-  padding-left: 0px;
-}
-.footer__list__elmt {
-  list-style-type: none;
-  vertical-align: middle;
-}
-.footer__list__elmt a {
-  text-decoration: none;
-  color: white;
-  font-size: 12px;
-  position: relative;
-}
-.footer__list__elmt span {
-  font-weight: bold;
-  position: absolute;
-  left: 25px;
-  width: 150px;
-  padding-top: 3px;
-}
-@media all and (min-width: 768px) {
-  .footer__list__elmt span {
-    position: initial;
-  }
 }
 
 h4 {
@@ -780,24 +803,4 @@ h4 {
   color: white;
   border-radius: 0px 20px 20px 0px;
   position: relative;
-}
-
-.command {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #f6f6f6;
-  text-align: center;
-  align-content: center;
-}
-.command__buton {
-  background: linear-gradient(#FF79DA, #9356DC);
-  padding: 15px 25px 15px 25px;
-  letter-spacing: 1px;
-  margin-top: 30px;
-  border-radius: 25px;
-  color: white;
-  font-size: 15px;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

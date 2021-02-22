@@ -1,0 +1,50 @@
+/* footer */
+
+.footer
+{
+  background-color: darken($primary, 80%);
+  color: white;
+  padding: 20px;
+  @media all and (min-width:768px)
+  {
+    text-align: center;
+  }
+  @media all and (min-width:992px)
+  {
+    font-size: 150%;
+  }
+  &__logo
+  {
+    @include fontlogo();
+  }
+}
+
+.footer__list
+{
+  padding-left: 0px;
+
+  &__elmt
+  {
+    list-style-type: none;
+    vertical-align: middle;
+  a
+  {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    position: relative;
+  }
+  span
+  {
+    font-weight: bold;
+    position: absolute;
+    left: 25px;
+    width: 150px;
+    padding-top: 3px;
+    @media all and (min-width:768px)
+  {
+    position:initial;
+  }
+  }
+  }
+}
