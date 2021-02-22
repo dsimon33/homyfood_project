@@ -1,0 +1,73 @@
+/* appararition des menus avec retard */
+@keyframes delay {
+  from{
+    transform-origin: top;
+    transform:scaley(0);
+  }
+  to{
+    transform: scaley(1);
+  }
+}
+
+/* apparation de la validation du menu */
+@keyframes valid {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+    width: 60px;
+  }
+}
+
+
+/* Réduction longueur menu avec apparition validation */
+@keyframes reduce320 {
+  from{
+    width: 200px;
+  }
+  to{
+    width: 140px;
+  }
+}
+
+/* Apparition du loading spinner */
+@keyframes loading {
+  0% {
+    opacity: 0;
+    transform:scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes loading_end {
+  0% {
+    opacity: 1;
+  }
+  80%{
+    opacity: 1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+/* apparition de la page aptés le loading spinner */
+@keyframes loading_start {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity:1;
+  }
+}

@@ -1,0 +1,16 @@
+/* définition des polices et couleurs personnalisées */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
+
+@mixin fontnormal {
+  font-family: roboto, Arial, Helvetica, sans-serif;
+}
+
+@mixin fontblack {
+  @include fontnormal();
+  font-weight: 800;
+}
+
+@mixin fontlogo {
+  font-family: shrikhand, roboto, Arial, sans-serif;
+}

@@ -1,0 +1,30 @@
+/* Modification au survol des vignettes Fonctionnements */
+@mixin hover_wl {
+  background-color: lighten($purple, 35%);
+  i{
+    color: $purple;
+  }
+  box-shadow: 5px 5px 5px darken($primary, 20%);
+}
+
+/* Modification du coeur au clic */
+@mixin heart {
+  &:checked + i {
+    opacity: 1;
+    transition: all 2s;
+  }
+}
+
+/* Apparence des buttons */
+@mixin button {
+    background:linear-gradient($pink, $purple);
+    padding: 15px 25px 15px 25px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    border-radius: 25px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,8 +1,17 @@
 h4
 {
   @include fontlogo;
-  font-size: 23px;
+  font-size: 24px;
   font-weight: normal;
+  @media all and (min-width:768px)
+  {
+    text-align: center;
+  }
+  @media all and (min-width:992px)
+  {
+    font-size: 200%;
+  }
+
 }
 
 .restaurantHeader__logo
@@ -41,6 +50,10 @@ h4
   top: -50px;
   width: 100%;
   border-radius: 25px 25px 0px 0px;
+  @media all and (min-width:992px)
+  {
+    top: -70px;
+  }
 
   &__title
   {
@@ -85,8 +98,9 @@ h4
 
 .menu
 {
-  padding-top: 13px;
+  padding-top: 15px;
   background-color:$primary;
+  
   &__title
   {
     border-bottom: 3px solid $green;
@@ -94,6 +108,11 @@ h4
     margin-left: 20px;
     font-weight: normal;
     padding-bottom: 5px;
+    @media all and (min-width:992px)
+  {
+    font-size: 120%;
+    width: 45px;
+  }
   }
 }
 

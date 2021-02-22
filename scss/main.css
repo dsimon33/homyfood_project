@@ -1,10 +1,6 @@
 @charset "UTF-8";
-/* définition des polices et couleurs personnalisées */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
-/* Modification au survol des vignettes Fonctionnements */
-/* Modification du coeur au clic */
-/* Apparence des buttons */
 /* appararition des menus avec retard */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 @-webkit-keyframes delay {
   from {
     transform-origin: top;
@@ -133,6 +129,10 @@
     opacity: 1;
   }
 }
+/* Modification au survol des vignettes Fonctionnements */
+/* Modification du coeur au clic */
+/* Apparence des buttons */
+/* définition des polices et couleurs personnalisées */
 /* définition des styles pricipaux de la page */
 #container {
   margin-top: 20px;
@@ -151,11 +151,26 @@ h1 {
   font-weight: normal;
   font-size: 30px;
 }
+@media all and (min-width: 992px) {
+  h1 {
+    font-size: 250%;
+  }
+}
 
 h2 {
   font-family: roboto, Arial, Helvetica, sans-serif;
   font-weight: 800;
   font-size: 24px;
+}
+@media all and (min-width: 768px) {
+  h2 {
+    text-align: center;
+  }
+}
+@media all and (min-width: 992px) {
+  h2 {
+    font-size: 200%;
+  }
 }
 
 /* loading spinner */
@@ -314,6 +329,7 @@ h2 {
 }
 .working__step:hover {
   background-color: #f2eafb;
+  box-shadow: 5px 5px 5px #c3c3c3;
 }
 .working__step:hover i {
   color: #9356DC;
@@ -359,6 +375,24 @@ h2 {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+}
+@media all and (min-width: 945px) {
+  .restaurant {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+@media all and (min-width: 1085px) {
+  .restaurant {
+    padding-left: 156px;
+    padding-right: 156px;
+  }
+}
+@media all and (min-width: 1255px) {
+  .restaurant {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 .restaurant__list {
   height: 100%;
@@ -455,6 +489,16 @@ h2 {
   color: white;
   padding: 20px;
 }
+@media all and (min-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+}
+@media all and (min-width: 992px) {
+  .footer {
+    font-size: 150%;
+  }
+}
 .footer__logo {
   font-family: shrikhand, roboto, Arial, sans-serif;
 }
@@ -479,11 +523,26 @@ h2 {
   width: 150px;
   padding-top: 3px;
 }
+@media all and (min-width: 768px) {
+  .footer__list__elmt span {
+    position: initial;
+  }
+}
 
 h4 {
   font-family: shrikhand, roboto, Arial, sans-serif;
-  font-size: 23px;
+  font-size: 24px;
   font-weight: normal;
+}
+@media all and (min-width: 768px) {
+  h4 {
+    text-align: center;
+  }
+}
+@media all and (min-width: 992px) {
+  h4 {
+    font-size: 200%;
+  }
 }
 
 .restaurantHeader__logo {
@@ -518,6 +577,11 @@ h4 {
   top: -50px;
   width: 100%;
   border-radius: 25px 25px 0px 0px;
+}
+@media all and (min-width: 992px) {
+  .menu_header {
+    top: -70px;
+  }
 }
 .menu_header__title {
   padding-left: 20px;
@@ -556,7 +620,7 @@ h4 {
 }
 
 .menu {
-  padding-top: 13px;
+  padding-top: 15px;
   background-color: #f6f6f6;
 }
 .menu__title {
@@ -565,6 +629,12 @@ h4 {
   margin-left: 20px;
   font-weight: normal;
   padding-bottom: 5px;
+}
+@media all and (min-width: 992px) {
+  .menu__title {
+    font-size: 120%;
+    width: 45px;
+  }
 }
 
 .menu_lists {
@@ -728,4 +798,6 @@ h4 {
   color: white;
   font-size: 15px;
   font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
