@@ -1,5 +1,5 @@
 /* loading spinner */
-.load-6 {
+.loadding_spinner {
   animation: loading_end 6s;
   animation-iteration-count: 1;
   position: absolute;
@@ -9,7 +9,7 @@
   opacity: 0;
 }
 
-.letter-holder {
+.letter-details{
   display: flex;
   @include fontblack;
   font-size: 300%;

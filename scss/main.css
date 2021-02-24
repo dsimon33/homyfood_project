@@ -215,7 +215,7 @@
 }
 
 /* loading spinner */
-.load-6 {
+.loadding_spinner {
   -webkit-animation: loading_end 6s;
           animation: loading_end 6s;
   -webkit-animation-iteration-count: 1;
@@ -227,7 +227,7 @@
   opacity: 0;
 }
 
-.letter-holder {
+.letter-details {
   display: flex;
   font-family: roboto, Arial, Helvetica, sans-serif;
   font-weight: 800;
